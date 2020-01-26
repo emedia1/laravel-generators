@@ -1,0 +1,45 @@
+{
+  "name": "emedia/generators",
+  "description": "Scaffolding Generator Package for Laravel 5",
+  "type": "library",
+  "repositories": [
+    {
+      "type":"vcs",
+      "url":"git@bitbucket.org:elegantmedia/quickdata-laravel.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:elegantmedia/laravel-helpers.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:elegantmedia/php-helpers.git"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "illuminate/console": "^5.7",
+    "emedia/quick-data-laravel": "~2.0"
+  },
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Shane Perera",
+      "email": "shane@elegantmedia.com.au"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "EMedia\\Generators\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "EMedia\\Generators\\GeneratorServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

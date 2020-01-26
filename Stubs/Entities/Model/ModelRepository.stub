@@ -1,0 +1,15 @@
+<?php
+
+namespace DummyNamespace\Entities\{{entityGroup}};
+
+use DummyNamespace\Entities\BaseRepository;
+
+class {{entityGroup}}Repository extends BaseRepository
+{
+
+	public function __construct(DummyClass $model)
+	{
+		parent::__construct($model);
+	}
+
+}

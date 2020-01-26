@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+
+class CreateFileDummyClassTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('file_{{entityLower}}', function(Blueprint $table)
+		{
+			$table->increments('id');
+			$table->integer('file_id')->unsigned()->index();
+			$table->foreign('file_id')->references('id')->on('files')->onDelete('cascade');
+			$table->integer('{{entityLower}}_id')->unsigned()->index();
+			$table->foreign('{{entityLower}}_id')->references('id')->on('{{entityGroupLower}}')->onDelete('cascade');
+		});
+	}
+
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('file_{{entityLower}}');
+	}
+
+}

@@ -1,0 +1,19 @@
+<?php
+namespace DummyNamespace\Http\Controllers;
+
+use View;
+use Config;
+
+class DashboardController extends Controller
+{
+
+	public function dashboard()
+	{
+		$data = [
+            'title' => config('app.name')
+        ];
+
+        return View::make('adminPanel::dashboard.dashboard', $data);
+	}
+
+}

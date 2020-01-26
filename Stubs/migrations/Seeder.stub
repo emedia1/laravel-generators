@@ -1,0 +1,23 @@
+<?php
+
+use DummyNamespace\Entities\{{entityGroup}}\DummyClass;
+use Faker\Factory as Faker;
+use Illuminate\Database\Seeder;
+
+class {{entityGroup}}TableSeeder extends Seeder
+{
+
+	public function run()
+	{
+		$faker = Faker::create('en_AU');
+
+		foreach(range(1, 10) as $index)
+		{
+			DummyClass::create([
+				'name'		    => $faker->sentence,
+				// 'description'	=> $faker->paragraph
+			]);
+		}
+	}
+
+}

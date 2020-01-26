@@ -1,0 +1,19 @@
+<?php
+
+namespace DummyNamespace\Http\Controllers;
+
+use DummyNamespace\Entities\{{entityGroup}}\DummyClass;
+use DummyNamespace\Entities\{{entityGroup}}\{{entityGroup}}Repository;
+
+class {{entityGroup}}Controller extends Controller
+{
+
+	protected $dataRepo;
+
+	public function __construct({{entityGroup}}Repository $dataRepo, DummyClass $model)
+	{
+		$this->model        = $model;
+		$this->dataRepo     = $dataRepo;
+	}
+
+}
