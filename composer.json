@@ -4,22 +4,22 @@
   "type": "library",
   "repositories": [
     {
-      "type":"vcs",
-      "url":"git@bitbucket.org:elegantmedia/quickdata-laravel.git"
+      "type":"git",
+      "url":"https://github.com/emedia1/quickdata-laravel.git"
     },
     {
-      "type": "vcs",
-      "url": "git@bitbucket.org:elegantmedia/laravel-helpers.git"
+      "type": "git",
+      "url": "https://github.com/emedia1/laravel-helpers.git"
     },
     {
-      "type": "vcs",
-      "url": "git@bitbucket.org:elegantmedia/php-helpers.git"
+      "type": "git",
+      "url": "https://github.com/emedia1/php-helpers.git"
     }
   ],
   "require": {
     "php": ">=5.6",
     "illuminate/console": "^5.7",
-    "emedia/quick-data-laravel": "~2.0"
+    "emedia/quick-data-laravel": "1.0"
   },
   "license": "proprietary",
   "authors": [
